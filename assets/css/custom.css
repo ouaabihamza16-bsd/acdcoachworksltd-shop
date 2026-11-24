@@ -1,0 +1,255 @@
+/* ACD Coachworks: custom styles (plain CSS, used alongside the Tailwind CDN) */
+
+html { scroll-behavior: smooth; }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  background: #1F3A5F;
+  color: #fff;
+  font-weight: 600;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+#main:focus { outline: none; }
+
+/* Focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #D64933;
+  outline-offset: 3px;
+  border-radius: 0.375rem;
+}
+
+/* Hero background */
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(214, 73, 51, 0.22), transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(47, 86, 135, 0.55), transparent 60%),
+    linear-gradient(135deg, #14181F 0%, #1F3A5F 100%);
+}
+
+/* Nav */
+.nav-link {
+  color: #14181F;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.nav-link:hover { color: #1F3A5F; border-bottom-color: #D64933; }
+
+/* Headings */
+.eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #B83A27;
+}
+.section-title {
+  margin-top: 0.5rem;
+  font-family: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #1F3A5F;
+}
+@media (min-width: 768px) {
+  .section-title { font-size: 3.25rem; }
+}
+
+/* Service cards */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid #e3e9f1;
+  border-top: 4px solid #D64933;
+  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(20, 24, 31, 0.1);
+}
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  background: #1F3A5F;
+  color: #fff;
+}
+.service-title {
+  margin-top: 1.5rem;
+  font-family: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #14181F;
+}
+.service-text {
+  margin-top: 0.75rem;
+  line-height: 1.65;
+  color: rgba(20, 24, 31, 0.8);
+}
+.service-list {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1F3A5F;
+}
+.service-list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 2px;
+  background: #D64933;
+}
+
+/* Why / facts */
+.why-bullet {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: #D64933;
+  color: #fff;
+  font-family: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.fact-card {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.fact-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(244, 245, 247, 0.75);
+}
+.fact-value {
+  margin-top: 0.35rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Footer */
+.footer-link {
+  color: rgba(244, 245, 247, 0.85);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.footer-link:hover { color: #fff; text-decoration-color: #D64933; }
+
+/* Legal modals */
+.legal-modal {
+  width: min(48rem, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: 0;
+  border-radius: 1rem;
+  background: #fff;
+  color: #14181F;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+.legal-modal::backdrop {
+  background: rgba(20, 24, 31, 0.7);
+}
+.legal-inner {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 2rem);
+}
+.legal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e3e9f1;
+}
+.legal-body {
+  overflow-y: auto;
+  padding: 1.5rem;
+  line-height: 1.65;
+  color: rgba(20, 24, 31, 0.85);
+}
+.legal-body h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-family: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  color: #1F3A5F;
+}
+.legal-body p + p { margin-top: 0.75rem; }
+.legal-body ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.legal-body li + li { margin-top: 0.35rem; }
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  color: #1F3A5F;
+}
+.modal-close:hover { background: #F4F5F7; }
+
+body.modal-open { overflow: hidden; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .service-card:hover { transform: none; }
+}
+
+[tabindex="-1"]:focus { outline: none; }
